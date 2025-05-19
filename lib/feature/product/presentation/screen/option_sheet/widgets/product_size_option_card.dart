@@ -29,7 +29,7 @@ class ProductSizeOptionCard extends StatelessWidget {
         widget: Column(
           children: [
             CommonContainer(
-              color: AppColors.otionButton,
+              color: AppColors.optionButton,
               width: double.infinity,
               height: 25.h,
               borderRadius: BorderRadius.vertical(top: Radius.circular(9.r)),
@@ -56,7 +56,7 @@ class ProductSizeOptionCard extends StatelessWidget {
         height: 75.h,
         width: 120.w,
         borderRadius: BorderRadius.circular(10.r),
-        borderColor:isSlected? AppColors.otionButton:Colors.transparent,
+        borderColor:isSlected? AppColors.optionButton:Colors.transparent,
       ),
     ).paddingSymmetric(horizontal: 2.h, vertical: 2.h);
   }

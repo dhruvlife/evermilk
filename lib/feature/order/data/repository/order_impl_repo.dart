@@ -4,7 +4,7 @@ import 'package:milkride/core/failure/failure.dart';
 import 'package:milkride/core/utils/exeption_handler.dart';
 import 'package:milkride/feature/cart/domain/entities/common_response.dart';
 import 'package:milkride/feature/order/data/repository/order_remote_repo.dart';
-import 'package:milkride/feature/order/domain/entities.dart/order_response.dart';
+import 'package:milkride/feature/order/domain/entities/order_response.dart';
 import 'package:milkride/feature/order/domain/repository/order_repository.dart';
 import 'package:milkride/feature/order/domain/usecase/order_cancel_usecase.dart';
 import 'package:milkride/feature/order/domain/usecase/order_get_usecase.dart';

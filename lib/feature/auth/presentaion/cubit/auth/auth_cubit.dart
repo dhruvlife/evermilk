@@ -104,6 +104,7 @@ class AuthCubit extends Cubit<AuthState> {
         StorageObject.saveData( key:StorageKeys.authToken,value:  otpResponse.appToken);
         StorageObject.saveData( key:StorageKeys.mobileNumber,value:  otpParam.mobileNumber);
         StorageObject.saveData( key:StorageKeys.userId,value:  otpParam.userId);
+        StorageObject.saveData( key:StorageKeys.customerId,value: otpResponse.customer?.id ?? "");
         AppFunctionalComponents.showSnackBar(message: AppStrings.loginSuccess);
         Get.offAllNamed(RoutesName.home);
       } else if (otpResponse.message == AppStrings.notRegistered) {
@@ -128,12 +129,14 @@ class AuthCubit extends Cubit<AuthState> {
           StorageObject.saveData(key:StorageKeys.authToken, value: registerResponse.appToken);
           StorageObject.saveData( key:StorageKeys.mobileNumber,value: registerParam.mobileNumber);
           StorageObject.saveData( key:StorageKeys.userId,value: registerParam.userId);
+          StorageObject.saveData( key:StorageKeys.customerId,value: registerResponse.customer?.id ?? "");
           AppFunctionalComponents.showSnackBar(message: AppStrings.registerAccountCreatedSuccess);
           Get.offAllNamed(RoutesName.home, );
         } else if (registerResponse.message == AppStrings.registerAccountCreatedAlready) {
           StorageObject.saveData(key:  StorageKeys.authToken,value:  registerResponse.appToken);
           StorageObject.saveData( key:StorageKeys.mobileNumber,value: registerParam.mobileNumber);
           StorageObject.saveData( key:StorageKeys.userId,value: registerParam.userId);
+          StorageObject.saveData( key:StorageKeys.customerId,value: registerResponse.customer?.id ?? "");
           AppFunctionalComponents.showSnackBar(message: AppStrings.registerAccountCreatedAlready);
           Get.offAllNamed(RoutesName.home);
         }

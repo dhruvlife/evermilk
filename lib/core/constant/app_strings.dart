@@ -1,7 +1,10 @@
 class AppStrings {
   AppStrings._();
 
-  static const String appName = "MilkRide";
+
+  static const String appName = 'EverMilk';
+    // core
+  static const String appPointId = "evermilk";
 
   // signin
   static const String signInResponseSuccess = "Otp sent successfully";
@@ -55,6 +58,7 @@ class AppStrings {
   static const String addessPickCityFirst = "Select city first";
   static const String addessAreaBottomSheetTitle = "Please select your Area";
   static const String addessCityBottomSheetTitle = "Please select your city";
+  static const String noProdFound = 'No products found';
 
   // personal detail page
   static const String personDetailTitle = "Personal Details";
@@ -67,6 +71,7 @@ class AppStrings {
   static const String personGenderMale = "Male";
   static const String personGenderFemale = "Female";
   static const String personGenderOther = "Other";
+  static const String cart = "cart";
 
   // refer page
   static const String referBottomSheetTitle = "How did you find us? (optional)";
@@ -89,7 +94,7 @@ class AppStrings {
   static const String profileTileMyProfile = "My Profile";
   static const String profileTilePref = "My Preference";
   static const String profileTileCart = "My Cart";
-  static const String profileTileSubmission = "My Submission";
+  static const String profileTileSubscription = "My Subscription";
   static const String profileTileOrder = "My Order";
   static const String profileTileInvoice = "Invoice History";
   static const String profileTileHelp = "Help";
@@ -118,7 +123,7 @@ class AppStrings {
   // Profile
   static const String profileTitle = "My Profile";
   static const String profileLogout = "Log Out";
-  static const String profileVerify = "verified by";
+  static const String profileVerify = "verified by ";
   static const String profileEmail = "Email Address";
   static const String profileEmailNotFound = "Email not found";
   static const String profileMobile = "Mobile Number";
@@ -132,6 +137,7 @@ class AppStrings {
   static const String profileDelivery = "Delivery Boy";
   static const String profileClipBoard = "Referral Code Copied!";
   static const String profileClipBoardTitle = "Copied!";
+  static const String orderId = "38";
 
   // error part
   static const String unExpectedError = "Something went wrong.";
@@ -160,9 +166,12 @@ class AppStrings {
   static const String orderPayableAmount = "Payable Amount";
   static const String orderPlaceOrder = "Place Order";
   static const String orderUpdate = "Update Quantity";
+  static const String cartEmpty = "Your cart is empty.";
+  static const String goShop = "Go for shopping";
 
   // subscribe page
   static const String subscribePageTitle = "Subscription";
+  static const String subscribePageAppBarTitle = "My Subscription";
 
   // button part
   static const String otpButtonText = "Enter OTP";
@@ -172,9 +181,9 @@ class AppStrings {
   static const String nextButtonText = "Next";
   static const String submit = "Submit";
   static const String login = "Login";
+  static const String all = "All";
 
-  // core
-  static const String appPointId = "dairydash";
+
 
   // product option bottom sheet
   static const String chooseDeliveryType = "Choose Delivery Type";
@@ -185,18 +194,19 @@ class AppStrings {
   static const String morning = "morning";
   static const String evening = "evening";
   static const String itemTotal = "Item Total";
-  static const String option = "Option";
+  static const String option = "Add";
   static const String mustTry = "Must Try";
   static const String buyOnce = "Buy Once";
   static const String subscribe = "Subscribe";
 
-  // order
+  // order 
   static const String orderSuccess = "Order placed successfully.";
   static const String orderCancel = "Order package cancelled";
   static const String orderFail = "Order Failed.";
   static const String orderPageTitle = "My Order";
   static const String orderDetail = "Order Details";
   static const String noOrderFound = "No Order Founds.";
+  static const String noSubscriptionFound = "No Subscription Founds.";
   static const String orderFound = "Orders page.";
 
   // subscription
@@ -216,19 +226,122 @@ class AppStrings {
 
   static const String deliverOn = "🛵 Deliver on";
   static const String deliverd = "delivered";
+  static const String deliverdCap = "Delivered";
   static const String selectReason = "Select Reason";
   static const String reason = "Reason";
   static const String reasonSelectTap = "Tap to select reason";
   static const String reasonSelect = "Please select a reason";
   static const String cancel = "Cancel";
   static const String delete = "Delete";
-  static const String subcription = "subcription";
+  static const String modify = "Modify";
+  static const String pause = "pause";
+  static const String resume = "resume";
+  static const String subcription = "Subcription";
 
   static const String continueShopping = "Continue Shopping";
+  static const String selectDateFirst = "Please select a date first.";
+  static const String selectFrequencyType = "Please select a frequency type.";
   static const String thankYou = "Thank You !!!";
   static const String atLeastOne = "Please select at least one day quantity.";
   static const String selectSchedule = "Please select schedule type.";
   static const String selectBothDate = "Please select both start and end date.";
+
+  static const String deleteSubscription = "Delete Subscription";
+  static const String deleteSubscriptionDescription = "Are you sure you want to delete this subscription?";
+  static const String modifySubscription = "Modify Subscription";
+  static const String modifySubscriptionDescription = "Do you want to modify this subscription?";
+  static const String modifyTemporarily = "Modify Temporarily";
+  static const String updatePermanently = "Update Permanently";
+  static const String pauseSubscription = "Pause Subscription";
+  static const String resumeSubscription = "Resume Subscription";
+  static const String pauseSubscriptionSuccess = "Pause Subscription Successfully.";
+  static const String pauseSubscriptionDescription = "You can modify your subscription for a time being or permanently";
+  static const String resumeSubscriptionDescription = "Resume your subscription by just resume tap.";
+  static const String fromDate = "From Date";
+  static const String toDate = "To Date";
+  static const String active = "• Active";
+  static const String yes = "Yes";
+  static const String areYouSure = "Are you Sure?";
+  static const String vacationMode = "Vacation Mode";
+  static const String retry = "Retry";
+  static const String pauseSub = "• Pause";
+  static const String subPauseFrom = "Your Subscription paused from";
+  static const String vacNotify = "Currently you are on vacation mode.";
+
+  static const String updateSub = "UPDATE SUBSCRIPTION";
+  static const String modifyPermenentLabel = "your subscription will be updated with the new quantity from";
+  static const String modifyPermenent = "Modify Permanently";
+  static const String modifyTemp = "Modify Temporarily";
+  static const String pickType = "Pick Type";
+  static const String singleDay = 'Single Day';
+  static const String multipleDay = 'Multiple Day';
+  static const String startAndEndDate = 'Start & End Date';
+  static const String date = 'Date';
+  static const String qtyChangeTo = "Quantity changed to";
+
+
+// logout 
+  static const String logOutTitle = 'Are You Sure Log Out?';
+  static const String logOut = 'Log out';
+
+
+  static const String deleteSubSuccess = "Subscription delete successfully";
+  static const String modifyTempSubSuccess = "Subscription Modify Temporarily successfully";
+  static const String modifyPermSubSuccess = "Subscription Modify Permenently successfully";
+  static const String resumeSubSuccess = "Subscription resumed successfully";
+  static const String subCartEmpty = "Your Subscription item is empty.";
+  static const String subResume = "Resume";
+
+
+  // wallet 
+  static const String walletTitle = "My Wallet";
+  static const String walletBalance = "Wallet Balance";
+  static const String reserveBalance = "Reserve Balance";
+  static const String addAmount = "Add Amount";
+  static const String add = "Add +";
+  static const String rechargeHistory = "Recharge History";
+  static const String billingHistory = "Billing History";
+  static const String recentHistory = "Recent History";
+  static const String viaPayGet = "Via Payment Gateway";
+  static const String debit = "debit";
+  static const String debitText = "Debit";
+  static const String credit = "credit";
+  static const String customerNotFound =  "Missing customer or user ID";
+  static const String noRechargeFound =  "No recharge history found.";
+  static const String selectDate =  'Select Date';
+  static const String addMoney =  'Add Money';
+  static const String payOnline =  'Pay Online';
+  static const String reqCash =  'Request Cash';
+  static const String enterAmount =  'Please enter your amount';
+  static const String proceedToPay =  'Proceed to pay';
+  static const String reqDate =  '07/05/2025';
+  static const String payOnlineRange =  'Payment minimum value ₹1 and maximum ₹6000. Please enter an amount within this range.';
+  static const String reqCashRange =  'Payment request minimum value ₹1 and maximum value ₹3000. Please enter an amount within this range.';
+  static const String maxAmountAdd =  "You can add maximum ₹6000.";
+  static const String minAmountAdd =  "You need add minimum ₹1.";
+  static const String payReqFailed =  "Payment request failed.";
+  static const String payVerifyFailed =  "Payment verification failed.";
+  static const String extWalletSelect =  "External wallet selected";
+  static const String paymentFailed =  "Payment failed:";
+  static const String errorVerifyPayment =  "Error verifying payment:";
+  static const String invalidPayment =  "Invalid payment response. Please try again.";
+  static const String errorRazorPay =  "Error opening Razorpay: ";
+  static const String orderIdNotFound =  "Order Id Not Found.";
+  static const String paymentInitFailed =  "Payment init failed. Please try again.";
+  static const String maxAmount =  "Maximum amount is ₹6000.";
+  static const String minAmount =  "Minimum amount is ₹1.";
+  static const String validAmount =  "Please enter a valid amount.";
+  static const String balance = "Balance";
+
+  // category
+  static const String search = "Search ...";
+  static const String allProducts = "All Products";
+
+
+
+
+
+
 
   // list of days
   static const List<String> weekdays = [

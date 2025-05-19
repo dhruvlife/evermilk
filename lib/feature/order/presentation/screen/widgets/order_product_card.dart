@@ -7,15 +7,17 @@ import 'package:milkride/core/common/app_text.dart';
 import 'package:milkride/core/common/common_container.dart';
 import 'package:milkride/core/constant/app_colors.dart';
 import 'package:milkride/core/constant/app_strings.dart';
-import 'package:milkride/feature/order/domain/entities.dart/to_be_delivered.dart';
+import 'package:milkride/feature/order/domain/entities/to_be_delivered.dart';
 
 class OrderProductCard extends StatelessWidget {
   final Order product;
   final VoidCallback onDelete;
+  final bool isDeleteAvail;
   const OrderProductCard({
     super.key,
     required this.product,
     required this.onDelete,
+    this.isDeleteAvail = true
   });
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class OrderProductCard extends StatelessWidget {
           image: product.imageUrl ?? "",
           height: 70.h,
           width: 70.w,
-          fit: BoxFit.fitHeight,
+          fit: BoxFit.fill,
         ).paddingOnly(right: 5.w),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,8 +43,7 @@ class OrderProductCard extends StatelessWidget {
                         labelSize: 8.sp,
                         borderRadius: BorderRadius.circular(15.r),
                         width: 60.w,
-                        label: product.deliveryType.toString())
-                    .paddingOnly(right: 5.w),
+                        label: product.deliveryType?.capitalize.toString() ?? "").paddingOnly(right: 5.w),
                 product.subscriptionType == null
                     ? product.packageStatus == AppStrings.deliverd
                         ? AppLabel(
@@ -50,13 +51,13 @@ class OrderProductCard extends StatelessWidget {
                             labelSize: 8.sp,
                             borderRadius: BorderRadius.circular(15.r),
                             width: 60.w,
-                            label: AppStrings.deliverd)
+                            label: AppStrings.deliverdCap)
                         : AppLabel(
                             height: 15.h,
                             labelSize: 8.sp,
                             borderRadius: BorderRadius.circular(15.r),
                             width: 60.w,
-                            label: AppStrings.dayWise)
+                            label: AppStrings.dayWiseCap)
                     : AppLabel(
                         height: 15.h,
                         labelSize: 8.sp,
@@ -84,13 +85,12 @@ class OrderProductCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              IconButton(
+              isDeleteAvail? IconButton(
                   onPressed: onDelete,
-                  icon: Icon(Icons.delete, size: 16.sp, color: AppColors.error)),
+                  icon: Icon(Icons.delete, size: 16.sp, color: AppColors.error)):SizedBox(height: 20.h,width: 20.w),
               AppText(data: "₹ ${product.totalSalePrice}",
                       fontSize: 10.sp,
-                      fontWeight: FontWeight.w500)
-                  .paddingOnly(right: 10.w)
+                      fontWeight: FontWeight.w500).paddingOnly(right: 10.w)
             ])
       ]).paddingAll(5),
     ).paddingAll(5);

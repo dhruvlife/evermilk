@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:milkride/feature/order/domain/entities.dart/order_response.dart';
+import 'package:milkride/feature/order/domain/entities/order_response.dart';
 
 abstract class OrderState extends Equatable {
   const OrderState();

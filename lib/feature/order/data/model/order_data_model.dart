@@ -1,5 +1,5 @@
-import 'package:milkride/feature/order/domain/entities.dart/order_detail.dart';
-import 'package:milkride/feature/order/domain/entities.dart/order_response.dart';
+import 'package:milkride/feature/order/domain/entities/order_detail.dart';
+import 'package:milkride/feature/order/domain/entities/order_response.dart';
 
 class OrderDataModel extends OrderResponse {
   OrderDataModel({

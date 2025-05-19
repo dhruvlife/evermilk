@@ -5,7 +5,6 @@ import 'package:milkride/core/common/app_elevated_button.dart';
 import 'package:milkride/core/common/app_text.dart';
 import 'package:milkride/core/constant/app_colors.dart';
 import 'package:milkride/core/constant/app_strings.dart';
-import 'package:milkride/core/routes/routes_name.dart';
 
 class OrderSuccessScreen extends StatelessWidget {
   const OrderSuccessScreen({super.key});
@@ -19,13 +18,17 @@ class OrderSuccessScreen extends StatelessWidget {
           Center(
             child: Icon(
               Icons.check_circle,
-              color: AppColors.otionButton,
+              color: AppColors.optionButton,
               size: 50.sp,
             ),
           ),
           AppText(data: AppStrings.thankYou).paddingOnly(bottom: 50.h),
           CustomElevatedButton(
-            onPressed: () => Get.toNamed(RoutesName.home),
+            onPressed: (){
+              Get.back();
+              Get.back();
+              Get.back();
+            } ,
             child: AppText(data:AppStrings.continueShopping),
           ).paddingSymmetric(horizontal: 15.w),
           Spacer(),

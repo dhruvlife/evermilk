@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:milkride/core/common/app_image.dart';
 import 'package:milkride/core/key/app_images.dart';
 import 'package:milkride/feature/auth/presentaion/cubit/auth/auth_cubit.dart';
-import 'package:milkride/service.dart/injection.dart';
+import 'package:milkride/service/injection.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

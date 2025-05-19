@@ -1,6 +1,6 @@
 import 'package:milkride/feature/home/data/model/home_model.dart';
 import 'package:milkride/feature/home/domain/usecase/home_usecase.dart';
-import 'package:milkride/service.dart/api_service.dart';
+import 'package:milkride/service/api_service.dart';
 
 abstract interface class HomeRemoteRepo {
   Future<HomeDataModel> getHomeResponse({required HomeParam homeParam});
@@ -15,10 +15,11 @@ class HomeImplRemoteRepo implements HomeRemoteRepo {
       mobileNumber: homeParam.mobileNumber,
       userId: homeParam.userId,
       type: homeParam.type,
-      deliveryType: homeParam.deviceType,
+      deviceType: homeParam.deviceType,
       deviceModel: homeParam.deviceModel,
       version: homeParam.version,
       deviceId: homeParam.deviceId,
+      length: 5,
     );
   }
 }

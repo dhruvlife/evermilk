@@ -44,7 +44,7 @@ class MrpText extends StatelessWidget {
           mrpPrice != null
               ? AppText(
                   fontWeight: mrpFontWeight ?? FontWeight.w400,
-                  fontSize: sellFontSize ?? 10.sp,
+                  fontSize: mrpFontSize ?? 10.sp,
                   data: mrpPrice ?? "",
                   decoration:TextDecoration.combine([TextDecoration.lineThrough,]),
                 )

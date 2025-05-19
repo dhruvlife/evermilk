@@ -1,7 +1,7 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:milkride/core/failure/failure.dart';
 import 'package:milkride/core/usecase/usecase.dart';
-import 'package:milkride/feature/order/domain/entities.dart/order_response.dart';
+import 'package:milkride/feature/order/domain/entities/order_response.dart';
 import 'package:milkride/feature/order/domain/repository/order_repository.dart';
 
 class OrderGetUsecase implements Usecase<OrderResponse,OrderCheckParam> {

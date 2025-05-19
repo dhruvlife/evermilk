@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:milkride/core/common/app_elevated_button.dart';
 import 'package:milkride/core/common/app_text.dart';
 import 'package:milkride/core/constant/app_colors.dart';
@@ -12,17 +12,16 @@ class OptionButton extends StatelessWidget {
     required this.onPressed,
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 30.h,
       width: 80.w,
-      child: CustomElevatedButton(onPressed: onPressed,backgroundColor: AppColors.otionButton, child:Row(
+      child: CustomElevatedButton(onPressed: onPressed,backgroundColor: AppColors.optionButton, child:Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          AppText(data: AppStrings.option,fontSize: 8.sp,color: AppColors.white,fontWeight: FontWeight.w600,),
-          Icon(Icons.arrow_drop_down,color: AppColors.white,size: 8.sp,)
+          AppText(data: AppStrings.option,fontSize: 10.sp,color: AppColors.white,fontWeight: FontWeight.w700).paddingOnly(right: 2.w),
+          Icon(Icons.add,color: AppColors.white,size: 10.sp)
         ],
       ))
     );

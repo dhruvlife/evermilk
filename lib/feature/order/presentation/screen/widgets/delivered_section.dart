@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:milkride/core/common/app_text.dart';
 import 'package:milkride/core/common/no_order_found_card.dart';
-import 'package:milkride/core/common/product_card_hor_loader.dart';
+import 'package:milkride/core/common/product_card_loader.dart';
 import 'package:milkride/core/constant/app_strings.dart';
 import 'package:milkride/feature/order/presentation/cubit/order_cubit.dart';
 import 'package:milkride/feature/order/presentation/cubit/order_state.dart';
@@ -23,7 +23,7 @@ class DeliveredSection extends StatelessWidget {
           final res = state.orderResponse;
           final deliveredList = state.orderResponse.data?.delivered ?? [];
           if (deliveredList.isEmpty) {
-            return NoOrderFoundCard();
+            return CommonEmptyCard(messege: AppStrings.noOrderFound, icon: Icons.category);
           } else {
             return ListView(
               padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),

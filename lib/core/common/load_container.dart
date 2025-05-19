@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:milkride/core/constant/app_colors.dart';
 import 'package:shimmer/shimmer.dart';
 
 class LoadContainer extends StatelessWidget {
@@ -16,18 +16,16 @@ class LoadContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 2.w, vertical: 2.h),
-      child: Shimmer.fromColors(
-        baseColor: Colors.grey.shade300,
-        highlightColor: Colors.grey.shade100,
-        child: Container(
-          width: width,
-          height: height,
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(radius??0),
-          ),
+    return Shimmer.fromColors(
+      period: Duration(seconds: 1),
+      baseColor: const Color.fromARGB(220, 230, 230, 230),
+      highlightColor: const Color.fromARGB(255, 255, 255, 255),
+      child: Container(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          color: AppColors.whiteShade,
+          borderRadius: BorderRadius.circular(radius??0),
         ),
       ),
     );

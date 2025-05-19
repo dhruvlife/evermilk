@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:milkride/feature/cart/data/model/cart_page_model.dart';
 import 'package:milkride/feature/cart/data/model/common_data_model.dart';
 import 'package:milkride/feature/cart/domain/usecase/subscription_usecase.dart';
-import 'package:milkride/service.dart/api_service.dart';
+import 'package:milkride/service/api_service.dart';
 
 abstract interface class CartRemoteRepo {
   Future<CartPageModel> getCartPageResponse({required String customerId});

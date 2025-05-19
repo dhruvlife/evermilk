@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:loader_overlay/loader_overlay.dart';
 import 'package:milkride/core/constant/app_strings.dart';
 import 'package:milkride/core/failure/failure.dart';
+import 'package:milkride/core/storage/storage_key.dart';
+import 'package:milkride/core/storage/storage_object.dart';
 import 'package:milkride/core/utils/app_functional_components.dart';
 import 'package:milkride/feature/cart/domain/entities/cart_info.dart';
 import 'package:milkride/feature/cart/domain/entities/cart_page_response.dart';
@@ -13,8 +15,7 @@ import 'package:milkride/feature/cart/domain/usecase/cart_qty_update_usecase.dar
 import 'package:milkride/feature/cart/domain/usecase/remove_item_cart_usecase.dart';
 import 'package:milkride/feature/cart/domain/usecase/subscription_usecase.dart';
 import 'package:milkride/feature/cart/presentation/cubit/cart/cart_state.dart';
-import 'package:milkride/feature/home/presentation/cubit/home_cubit.dart';
-import 'package:milkride/service.dart/injection.dart';
+
 
 class CartPageCubit extends Cubit<CartPageState> {
   final CartPageUsecase cartPageUsecase;
@@ -32,11 +33,12 @@ class CartPageCubit extends Cubit<CartPageState> {
   Map<int, int> originalQuantities = {};
   double totalAmount = 0.0;
   
-  Future<void> fetchCartPageDetail({required String customerId}) async {
+  Future<void> fetchCartPageDetail() async {
     emit(CartPageLoading());
-    final Either<Failure, CartPageResponse> result = await cartPageUsecase.call(customerId);
+    final Either<Failure, CartPageResponse> result = await cartPageUsecase.call(StorageObject.readData(StorageKeys.customerId).toString());
     result.fold(
       (failure) {
+        emit(CartPageError(failure));
         AppFunctionalComponents.showSnackBar(message: failure.messege);
       },
       (result) {
@@ -76,10 +78,10 @@ class CartPageCubit extends Cubit<CartPageState> {
     double total = 0.0;
     final items = cartData.package ?? [];
     for (var item in items) {
-      final price = item.price ?? 0;
+      final price = item.price ?? "0";
       final cartId = item.cartId!;
       final qty = cartQuantities[cartId] ?? item.qty ?? 1;
-      total += price * qty;
+      total += double.parse(price) * qty;
     }
     return total;
   }
@@ -116,8 +118,7 @@ class CartPageCubit extends Cubit<CartPageState> {
     }, (response) {
       if (response.message == AppStrings.qtyUpdateSuccess) {
         AppFunctionalComponents.showSnackBar(message: AppStrings.qtyUpdateSuccess);
-        final customerId = getIt<HomeCubit>().userData?.id;
-        fetchCartPageDetail(customerId: customerId.toString());           
+        fetchCartPageDetail();           
       } else {
         AppFunctionalComponents.showSnackBar(message: AppStrings.qtyUpdateFail);
       }
@@ -131,8 +132,7 @@ class CartPageCubit extends Cubit<CartPageState> {
     result.fold(
     (failure) {AppFunctionalComponents.showSnackBar(message: failure.messege);},
     (response) {
-      final customerId = getIt<HomeCubit>().userData?.id;
-      fetchCartPageDetail(customerId: customerId.toString());
+      fetchCartPageDetail();
       if (response.message == AppStrings.cartItemRemoveSuccess) {
         AppFunctionalComponents.showSnackBar(message: AppStrings.cartItemRemoveSuccess);
       } else {

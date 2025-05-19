@@ -28,9 +28,9 @@ class Product {
   bool? isSubscriptionPlan;
   String? planTitle;
   int? qty;
-  int? price;
+  String? price;
   String? priceDecimal;
-  int? totalPrice;
+  String? totalPrice;
   String? totalPriceDecimal;
   String? deliveryDate;
   int? cartId;

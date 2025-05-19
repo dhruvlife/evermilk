@@ -15,6 +15,11 @@ class HomeLoaded extends HomeState {
   List<Object?> get props => [homeResponse];
 }
 
+class TabChanged extends HomeState {
+  final int index;
+  TabChanged(this.index);
+}
+
 class HomeError extends HomeState {
   final String errorMessage;
   HomeError({required this.errorMessage});

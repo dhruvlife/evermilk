@@ -11,4 +11,9 @@ class RoutesName {
   static const String cartPage = "/cartPage";
   static const String subscribePage = "/subscribePage";
   static const String orderSuccess = "/orderSuccess";
+  static const String modifyTemp = "/modifyTemp";
+  static const String modifyPermenent = "/modifyPermenent";
+  static const String wallet = "/wallet";
+  static const String rechargeHistory = "/rechargeHistory";
+  static const String billingHistory = "/billingHistory";
 }

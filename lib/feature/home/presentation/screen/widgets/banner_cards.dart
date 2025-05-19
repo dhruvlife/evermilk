@@ -5,7 +5,7 @@ import 'package:milkride/core/common/app_network_image.dart';
 import 'package:milkride/core/constant/app_colors.dart';
 import 'package:milkride/feature/home/domain/entities/header_banner.dart';
 import 'package:milkride/feature/home/presentation/cubit/home_cubit.dart';
-import 'package:milkride/service.dart/injection.dart';
+import 'package:milkride/service/injection.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -29,7 +29,7 @@ class BannerCardsState extends State<BannerCards> {
           carouselController: carouselController,
           itemCount: widget.banners.length,
           options: CarouselOptions(
-            height: 120.h,
+            height: 140.h,
             autoPlay: true,
             autoPlayInterval: Duration(seconds: 3),
             viewportFraction: 1,
@@ -47,6 +47,7 @@ class BannerCardsState extends State<BannerCards> {
               height: 120.h,
               width: 1.sw,
               fit: BoxFit.fill,
+              radius: BorderRadius.circular(10.r),
             );
           },
         ).paddingOnly(bottom: 10.h),

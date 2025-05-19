@@ -30,7 +30,7 @@ class QuantityButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CommonContainer(
       borderRadius: borderRadius??BorderRadius.circular(20.r),
-      borderColor: AppColors.otionButton,
+      borderColor: AppColors.optionButton,
         widget: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

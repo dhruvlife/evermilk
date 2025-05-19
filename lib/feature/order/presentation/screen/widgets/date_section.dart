@@ -21,8 +21,7 @@ class DateSection extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemCount: 6,
               itemBuilder: (context, index) {
-                return LoadContainer(height: 70.h, width: 70.w,radius: 8.r)
-                    .paddingSymmetric(horizontal: 5.w);
+                return LoadContainer(height: 70.h, width: 70.w,radius: 8.r).paddingSymmetric(horizontal: 5.w);
               },
             );
           } else if (state is OrderLoaded) {
@@ -34,7 +33,7 @@ class DateSection extends StatelessWidget {
               },
             );
           } else if(state is OrderError){
-            NetworkFailCard(messege: state.message);
+            NetworkFailCard(messege: state.message,isButtonRequired: true,);
           }
           return Container();
         },

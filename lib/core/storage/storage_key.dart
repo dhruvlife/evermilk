@@ -4,4 +4,5 @@ class StorageKeys {
   static const String authToken = "authToken";
   static const String mobileNumber = "mobileNumber";
   static const String userId = "userId";
+  static const String customerId = "customerId";
 }

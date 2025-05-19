@@ -15,7 +15,7 @@ import 'package:milkride/feature/product/domain/entities/product.dart';
 import 'package:milkride/feature/product/domain/usecase/product_usecase.dart';
 import 'package:milkride/feature/product/presentation/screen/option_sheet/widgets/option_button.dart';
 import 'package:milkride/feature/product/presentation/screen/option_sheet/product_option_sheet.dart';
-import 'package:milkride/service.dart/injection.dart';
+import 'package:milkride/service/injection.dart';
 
 class ProductCategoryCard extends StatelessWidget {
   final Product product;

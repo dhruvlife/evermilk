@@ -32,7 +32,7 @@ class SelectedButton extends StatelessWidget {
         style: ButtonStyle(
           shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.r))),
             backgroundColor: isSlected
-                ? WidgetStateProperty.all(AppColors.otionButton)
+                ? WidgetStateProperty.all(AppColors.optionButton)
                 : WidgetStateProperty.all(AppColors.white)),
         child: AppText(
           data: data,

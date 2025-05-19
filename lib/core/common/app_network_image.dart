@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:milkride/core/common/common_container.dart';
-import 'package:milkride/core/common/loding_indicator.dart';
+import 'package:milkride/core/common/load_container.dart';
 import 'package:milkride/feature/home/presentation/cubit/home_cubit.dart';
-import 'package:milkride/service.dart/injection.dart';
+import 'package:milkride/service/injection.dart';
 
 class AppNetWorkImage extends StatelessWidget {
   final String image;
@@ -49,12 +50,7 @@ class AppNetWorkImage extends StatelessWidget {
           if (loadingProgress == null) {
             return child;
           } else {
-            return Container(
-              color: Colors.white,
-              height: height,
-              width: width,
-              child: Center(child:LodingIndicator()),
-            );
+            return LoadContainer(height: height, width: width,radius: 5.r);
           }
         },
       ),

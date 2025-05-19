@@ -1,7 +1,7 @@
 class EndPoints {
   EndPoints._();
-  static const String version = "/milkride/v1";
-  static const String v3 = "/milkride/v3";
+  static const String version = "/milkride/v4";
+  // static const String v3 = "/milkride/v3";
   static const String prodView = "/product-view";
   static const String signup = "/signup";
   static const String signin = "/signin";
@@ -20,4 +20,18 @@ class EndPoints {
   static const String orderPlace = "/order-place";
   static const String orders = "/orders";
   static const String orderCancel = "/order-cancel";
+  static const String mySubscription = "/my-subscription";
+  static const String temporaryChange = "/temporary-change";
+  static const String pauseSubscription = "/pause-subscription";
+  static const String resumeSubscription = "/resume-subscription";
+  static const String updateQuantity = "/update-quantity";
+  static const String deleteSubscription = "/delete-subscription";
+  static const String wallet = "/wallet";
+  static const String walletHistory = "/wallet-history";
+  static const String billingHistory = "/billing-history";
+  static const String paymentRequest = "/payment-request";
+  static const String verifyPayment = "/verify-payment";
+  static const String payOnline = "/pay-online";
+  static const String vacation = "/vacation-update";
+  static const String profile = "/profile";
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 import 'package:milkride/core/common/app_text.dart';
 import 'package:milkride/core/constant/app_colors.dart';
 
@@ -62,5 +63,46 @@ class AppFunctionalComponents {
       ),
       builder: builder,
     );
+  }
+
+  static void showActionDialog({
+    required BuildContext context,
+    required String title,
+    required String subtitle,
+    required IconData titleIcon,
+    required Widget actions,
+  }) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        contentPadding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16.r),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(titleIcon, size: 50.sp).paddingOnly(bottom: 10.h),
+            AppText(data: title, fontWeight: FontWeight.bold)
+                .paddingOnly(bottom: 10.h),
+            AppText(
+              data: subtitle,
+              textAlign: TextAlign.center,
+              fontSize: 12.sp,
+            ),
+            actions.paddingSymmetric(vertical: 10.h),
+          ],
+        ),
+      ),
+    );
+  }
+
+  static String formatDate({required String date}) {
+    try {
+      final parsedDate = DateFormat("yyyy-MM-dd").parse(date);
+      return DateFormat('dd/MM/yyyy').format(parsedDate);
+    } catch (e) {
+      return DateFormat('dd/MM/yyyy').format(DateTime.now());
+    }
   }
 }

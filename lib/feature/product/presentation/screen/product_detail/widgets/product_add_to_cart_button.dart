@@ -21,7 +21,7 @@ class ProductAddToCartButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: CustomElevatedButton(
-        backgroundColor: AppColors.otionButton,
+        backgroundColor: AppColors.optionButton,
         onPressed: onTap,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

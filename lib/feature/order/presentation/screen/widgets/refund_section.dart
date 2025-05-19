@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:milkride/core/common/app_text.dart';
 import 'package:milkride/core/common/no_order_found_card.dart';
-import 'package:milkride/core/common/product_card_hor_loader.dart';
+import 'package:milkride/core/common/product_card_loader.dart';
 import 'package:milkride/core/constant/app_strings.dart';
 import 'package:milkride/feature/order/presentation/cubit/order_cubit.dart';
 import 'package:milkride/feature/order/presentation/cubit/order_state.dart';
@@ -18,12 +18,12 @@ class RefundSection extends StatelessWidget {
     return BlocBuilder<OrderCubit, OrderState>(
       builder: (context, state) {
         if (state is OrderLoading) {
-          return ProductCardLoader(productHeight: 60.h, productWidth: 0.9.sw, padding: 5, count:5, productRadius: 5,);
+          return ProductCardLoader(productHeight: 60.h, productWidth: 0.9.sw, padding: 5, count:5, productRadius: 5);
         } else if (state is OrderLoaded) {
           final res = state.orderResponse;
           final refundList = state.orderResponse.data?.refund ?? [];
           if (refundList.isEmpty) {
-            return NoOrderFoundCard();
+             return CommonEmptyCard(messege:AppStrings.noOrderFound, icon:Icons.category);
           } else {
             return ListView(
               padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
@@ -34,6 +34,7 @@ class RefundSection extends StatelessWidget {
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (context, index) {
                     return OrderProductCard(
+                      isDeleteAvail: false,
                       product: refundList[index],
                       onDelete: () {},
                     );
@@ -44,8 +45,7 @@ class RefundSection extends StatelessWidget {
                   fontSize: 12.sp,
                   fontWeight: FontWeight.w600,
                 ).paddingOnly(left: 10.w),
-                OrderDetailSection(total: res.refundGrandTotal.toString())
-                    .paddingSymmetric(horizontal: 5.w, vertical: 10.h),
+                OrderDetailSection(total: res.refundGrandTotal.toString()).paddingSymmetric(horizontal: 5.w, vertical: 10.h),
               ],
             );
           }

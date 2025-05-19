@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:milkride/core/constant/app_strings.dart';
 import 'package:milkride/core/utils/app_functional_components.dart';
-import 'package:milkride/feature/order/domain/entities.dart/order_reason.dart';
+import 'package:milkride/feature/order/domain/entities/order_reason.dart';
 
 Future<void> showCancelReasonDialog({
   required BuildContext context,
@@ -33,9 +34,9 @@ Future<void> showCancelReasonDialog({
                         itemBuilder: (context, index) {
                           final reason = reasons[index];
                           return ListTile(
-                            title: Text(reason.name ?? ''),
+                            title: Text(reason.name ?? ""),
                             onTap: () {
-                              Navigator.pop(context, reason);
+                              Get.back(result: reason);
                             },
                           );
                         },

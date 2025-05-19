@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:milkride/core/common/app_text.dart';
-import 'package:milkride/core/common/loding_indicator.dart';
 import 'package:milkride/core/common/network_fail_card.dart';
 import 'package:milkride/core/constant/app_strings.dart';
 import 'package:milkride/core/routes/routes_name.dart';
@@ -12,6 +11,7 @@ import 'package:milkride/core/storage/storage_object.dart';
 import 'package:milkride/feature/home/presentation/screen/widgets/categories_product_card.dart';
 import 'package:milkride/feature/product/presentation/cubit/category_all/all_category_cubit.dart';
 import 'package:milkride/feature/product/presentation/cubit/category_all/all_category_state.dart';
+import 'package:milkride/feature/product/presentation/screen/all_category/widgets/view_all_cat_loader.dart';
 
 class AllCategoryPage extends StatefulWidget {
   const AllCategoryPage({super.key});
@@ -44,23 +44,23 @@ class _AllCategoryPageState extends State<AllCategoryPage> {
       body: BlocBuilder<AllCategoryCubit, CategoryState>(
         builder: (context, state) {
           if (state is CategoryLoading) {
-            return LodingIndicator();
+            return ViewAllCatLoader();
           } else if (state is CategoryError) {
-            NetworkFailCard(messege:state.message);
+            NetworkFailCard(messege:state.message,isButtonRequired: true,);
           } else if (state is CategoryLoaded) {
-            final category = state.response.categories;
+            final category = state.response.categories ?? [];
             return Column(
               children: [
                 Expanded(
                     child: GridView.builder(
                         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                             mainAxisSpacing: 10.h, crossAxisCount: 3),
-                        itemCount: category?.length,
+                        itemCount: category.length,
                         itemBuilder: (context, index) {
                           return CategoriesProductCard(
                               height: 100.h,
                               width: 100.w,
-                              categoryProd: category![index],
+                              categoryProd: category[index],
                               onTapCategory: () {
                                 Get.toNamed(RoutesName.categoeyProds,arguments: category[index]);
                               });
@@ -68,9 +68,10 @@ class _AllCategoryPageState extends State<AllCategoryPage> {
               ],
             );
           }
-          return NetworkFailCard(messege:AppStrings.error);
+          return NetworkFailCard(messege:AppStrings.error,isButtonRequired: true,);
         },
       ),
     );
   }
 }
+

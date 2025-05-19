@@ -4,7 +4,7 @@ import 'package:milkride/feature/product/data/model/product_detail_model.dart';
 import 'package:milkride/feature/product/data/model/product_variants.dart';
 import 'package:milkride/feature/product/domain/usecase/category_products_usecase.dart';
 import 'package:milkride/feature/product/domain/usecase/product_usecase.dart';
-import 'package:milkride/service.dart/api_service.dart';
+import 'package:milkride/service/api_service.dart';
 
 abstract interface class ProductRemoteRepo {
   Future<CategoryProductModel> getCategoriesProducts({required CategoryProdParam categoryProdParam});

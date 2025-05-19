@@ -22,7 +22,6 @@ part 'home_state.dart';
 class HomeCubit extends Cubit<HomeState> {
   final HomeUsecase homeUsecase;
   HomeCubit({required this.homeUsecase}) : super(HomeInitial());
-
   HomeData? homeData;
   Customer? userData;
   List<Product>? bestSeller;
@@ -32,13 +31,21 @@ class HomeCubit extends Cubit<HomeState> {
   List<Banners>? headerBanners;
   List<Banners>? middleBanners;
   List<Banners>? footerBanners;
+  String? qty;
   Config? config;
 
+  int currentIndex = 0;
+
+  void changeTab(int index) {
+    currentIndex = index;
+    emit(TabChanged(index)); // Emit a new state
+  }
+
+  void jumpToHomeTab() => changeTab(0);
   Future<void> getHomeResponse({required HomeParam homeParam}) async {
     emit(HomeLoading());
     try {
-      final Either<Failure, HomeResponse> response =
-          await homeUsecase.call(homeParam);
+      final Either<Failure, HomeResponse> response = await homeUsecase.call(homeParam);
       response.fold(
         (failure) {
           emit(HomeError(errorMessage: failure.messege));
@@ -46,7 +53,7 @@ class HomeCubit extends Cubit<HomeState> {
         },
         (homeResponse) {
           emit(HomeLoaded(homeResponse: homeResponse));
-          if (homeResponse.message == AppStrings.homeSuccess) {
+          if (homeResponse.status== AppStrings.success) {
             homeData = homeResponse.homeData;
             config = homeData?.config;
             userData = homeData?.customer;
@@ -56,10 +63,8 @@ class HomeCubit extends Cubit<HomeState> {
             categories = homeData?.categories;
             headerBanners = homeData?.headerBanners;
             middleBanners = homeData?.middleBanners;
-            footerBanners = homeData?.footerBanners;
-            AppFunctionalComponents.showSnackBar(
-              message: AppStrings.homeSnacSuccess,
-            );
+            footerBanners = homeData?.footerBanners;     
+            qty = homeData?.cartQty.toString();     
           } else if (homeResponse.message == AppStrings.homeFailAuth) {
             AppFunctionalComponents.showSnackBar(
               message: AppStrings.homeFailAuthSanc,

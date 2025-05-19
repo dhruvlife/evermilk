@@ -1,11 +1,10 @@
 class ReferralProgram {
   int? id;
-  int? minimumRecharge;
-  int? referrerBonus;
-  int? refereeBonus;
+  String? minimumRecharge;
+  String? referrerBonus;
+  String? refereeBonus;
 
-  ReferralProgram(
-      {this.id, this.minimumRecharge, this.referrerBonus, this.refereeBonus});
+  ReferralProgram({this.id, this.minimumRecharge, this.referrerBonus, this.refereeBonus});
 
   ReferralProgram.fromJson(Map<String, dynamic> json) {
     id = json['id'];

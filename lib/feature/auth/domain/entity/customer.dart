@@ -8,7 +8,7 @@ class Customer {
   int? isPostpaid;
   String? customerReferrerCode;
   dynamic wallet;
-  int? creditLimit;
+  String? creditLimit;
 
   Customer(
       {this.id,
