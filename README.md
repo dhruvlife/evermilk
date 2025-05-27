@@ -11,7 +11,6 @@
 [home]: screenshots/home.jpg 'Home'
 [my-details]: screenshots/my-details.jpg 'My Details'
 [notifications]: screenshots/notifications.jpg 'Notifications'
-[onboarding]: screenshots/onboarding.jpg 'Onboarding'
 [order-details]: screenshots/order-details.jpg 'Order Details'
 [orders]: screenshots/orders.jpg 'Orders'
 [payment-methods]: screenshots/payment-methods.jpg 'Payment Methods'
@@ -21,25 +20,27 @@
 [register-phone]: screenshots/register-phone.jpg 'Register Phone'
 [select-location]: screenshots/select-location.jpg 'Select Location'
 [set-location]: screenshots/set-location.jpg 'Set Location'
-[signin]: screenshots/signin.jpg 'Sign In'
+[signin]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/6.jpg 'Sign In'
+[otp]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/1.jpg 'Otp Screen'
 [signup]: screenshots/signup.jpg 'Sign Up'
-[splash]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/25.jpg 'Splash'
-[store-details]: screenshots/store-details.jpg 'Store Details'
+[personal-detail]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/11.jpg 'Personal Detail'
+[address-detail]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/19.jpg 'Address Detail'
+[additional-signup-info-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/24.jpg 'Additional Signup Info Page'
 [stores]: screenshots/stores.jpg 'Stores'
 [update-location]: screenshots/update-location.jpg 'Update Location'
 [verification]: screenshots/verification.jpg 'Verification'
 
 <!-- table of screenshots -->
 
-|      Splash       |        Onboarding         |       Signin       |
-| :---------------: | :-----------------------: | :----------------: |
-| ![Splash][splash] | ![Onboarding][onboarding] | ![Sign In][signin] |
+|      Sign In       |        Otp Screen         |
+| :---------------: | :-----------------------: |
+| ![Signin][signin] | ![Otp][otp] | 
 
 <!-- signup, forgot, register phone -->
 
-|       Signup       |           Forgot Password           |          Register Phone           |
+|       Signup       |           Forgot Password           |          Additional Signup Info Page           |
 | :----------------: | :---------------------------------: | :-------------------------------: |
-| ![Sign Up][signup] | ![Forgot Password][forgot-password] | ![Register Phone][register-phone] |
+| ![Personal-detail][personal-detail] | ![Address-detail][address-detail] | ![Additional-signup-info-page][additional-signup-info-page] |
 
 |              Register Phone Dialog              |         Verification          |           Select Location           |
 | :---------------------------------------------: | :---------------------------: | :---------------------------------: |
