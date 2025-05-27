@@ -18,12 +18,20 @@
 [user-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/10.jpg 'User Subscription'
 [pause-resume-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/18.jpg 'Pause/Resume Subscription'
 [modify-temporary-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/16.jpg 'Modify Temporary Subscription'
-
+[wallet-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/15.jpg 'Wallet Page'
+[amount-add-sheet]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/4.jpg 'Amount Add Sheet'
+[request-cash]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/20.jpg 'Request Cash'
+[payment-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/9.jpg 'Payment Page'
+[recharge-history]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/5.jpg 'Recharge History'
+[billing-history]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/3.jpg 'Billing History'
+[vacation-mode]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/8.jpg 'Vacation Mode'
+[profile-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/7.jpg 'Profile Page'
+[order-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/22.jpg 'Order Page'
 <!-- table of screenshots -->
 
-|      Sign In       |        Otp Screen         |
-| :---------------: | :-----------------------: |
-| ![Signin][signin] | ![Otp][otp] | 
+|      Sign In       | Otp Screen  |
+| :----------------: | :---------: |
+| ![Signin][signin]  | ![Otp][otp] | 
 
 |          Personal Detail            |           Address Detail          |                Additional Signup Info Page                  |
 | :--------------------------------:  | :-------------------------------: | :---------------------------------------------------------: |
@@ -45,15 +53,15 @@
 | :-------------------------------------: | :-----------------------------------------------------: | :-------------------------------------------------------------: | 
 | ![User Subscription][user-subscription] | ![Pause/Resume Subscription][pause-resume-subscription] | ![Modify Temporary Subscription][modify-temporary-subscription] |
 
-|      Orders       |           Payment Methods           |
-| :---------------: | :---------------------------------: |
-|  ![Orders][orders] | ![Payment Methods][payment-methods] |
+|         Order Page         |          Vacation Mode          |          Profile Page          |
+| :------------------------: | :-----------------------------: | :----------------------------: |
+|  ![Order Page][order-page] | ![Vacation Mode][vacation-mode] | ![Profile Page][profile-page]  |
 
-|        My Details         |       Account       |          Notifications          |
-| :-----------------------: | :-----------------: | :-----------------------------: |
-| ![My Details][my-details] | ![Account][account] | ![Notifications][notifications] |
+|         Wallet Page         |           Amount Add Sheet            |          Request Cash         |
+| :-------------------------: | :-----------------------------------: | :---------------------------: |
+| ![Wallet Page][wallet-page] | ![Amount Add Sheet][amount-add-sheet] | ![Request Cash][request-cash] |
 
-|     Help      |
-| :-----------: |
-| ![Help][help] |
+|         Payment Page          |            Recharge History           |            Billing History          |
+| :---------------------------: | :-----------------------------------: | :---------------------------------: |
+| ![Payment Page][payment-page] | ![Recharge History][recharge-history] | ![Billing History][billing-history] |
  
