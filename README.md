@@ -12,6 +12,11 @@
 [product-varient-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/2.jpg 'Product Varient Page'
 [product-detail]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/12.jpg 'Product Detail Page'
 [cart-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/31.jpg 'Cart Page'
+[subscription-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/13.jpg 'Subscription Page'
+[day-wise-quantity]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/21.jpg 'Day-Wise Quantity'
+[user-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/10.jpg 'User Subscription'
+[pause-resume-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/18.jpg 'Pause/Resume Subscription'
+
 <!-- table of screenshots -->
 
 |      Sign In       |        Otp Screen         |
@@ -32,13 +37,13 @@
 | :---------------------------: | :-----------: | :---------------: |
 | ![Product Varient Page][product-varient-page] | ![Product Detail Page][product-detail] | ![Cart Page][cart-page] |
 
-|          Store Details          |       Explore       |       Category        |
-| :-----------------------------: | :-----------------: | :-------------------: |
-| ![Store Details][store-details] | ![Explore][explore] | ![Category][category] |
+|          Subscription Page          |       Day-Wise Quantity       |
+| :-----------------------------: | :-----------------: |
+| ![Subscription Page][subscription-page] | ![Day-Wise Quantity][day-wise-quantity] |
 
-|           Product Details           |     Cart      |        Favorites        |
-| :---------------------------------: | :-----------: | :---------------------: |
-| ![Product Details][product-details] | ![Cart][cart] | ![Favorites][favorites] |
+|           User Subscription           |     Pause/Resume Subscription      |
+| :---------------------------------: | :-----------: |
+| ![User Subscription][user-subscription] | ![Pause/Resume Subscription][pause-resume-subscription] |
 
 |          Order Details          |      Orders       |           Payment Methods           |
 | :-----------------------------: | :---------------: | :---------------------------------: |
