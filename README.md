@@ -23,7 +23,7 @@
 [set-location]: screenshots/set-location.jpg 'Set Location'
 [signin]: screenshots/signin.jpg 'Sign In'
 [signup]: screenshots/signup.jpg 'Sign Up'
-[splash]: screenshots/splash.jpg 'Splash'
+[splash]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/1.jpg 'Splash'
 [store-details]: screenshots/store-details.jpg 'Store Details'
 [stores]: screenshots/stores.jpg 'Stores'
 [update-location]: screenshots/update-location.jpg 'Update Location'
