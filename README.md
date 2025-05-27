@@ -17,14 +17,13 @@
 [day-wise-quantity]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/23.jpg 'Day-Wise Quantity'
 [user-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/10.jpg 'User Subscription'
 [pause-resume-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/18.jpg 'Pause/Resume Subscription'
+[modify-temporary-subscription]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/16.jpg 'Modify Temporary Subscription'
 
 <!-- table of screenshots -->
 
 |      Sign In       |        Otp Screen         |
 | :---------------: | :-----------------------: |
 | ![Signin][signin] | ![Otp][otp] | 
-
-<!-- signup, forgot, register phone -->
 
 |          Personal Detail            |           Address Detail          |                Additional Signup Info Page                  |
 | :--------------------------------:  | :-------------------------------: | :---------------------------------------------------------: |
@@ -42,13 +41,13 @@
 | :---------------------------------------------------: | :-------------------------------------: | :---------------------------: |
 | ![View All Categories Page][view-all-categories-page] | ![Subscription Page][subscription-page] | ![Day-Wise Quantity][day-wise-quantity] |
 
-|           User Subscription           |     Pause/Resume Subscription      |
-| :---------------------------------: | :-----------: |
-| ![User Subscription][user-subscription] | ![Pause/Resume Subscription][pause-resume-subscription] |
+|            User Subscription            |                 Pause/Resume Subscription               |                 Modify Temporary Subscription                   |
+| :-------------------------------------: | :-----------------------------------------------------: | :-------------------------------------------------------------: | 
+| ![User Subscription][user-subscription] | ![Pause/Resume Subscription][pause-resume-subscription] | ![Modify Temporary Subscription][modify-temporary-subscription] |
 
-|          Order Details          |      Orders       |           Payment Methods           |
-| :-----------------------------: | :---------------: | :---------------------------------: |
-| ![Order Details][order-details] | ![Orders][orders] | ![Payment Methods][payment-methods] |
+|      Orders       |           Payment Methods           |
+| :---------------: | :---------------------------------: |
+|  ![Orders][orders] | ![Payment Methods][payment-methods] |
 
 |        My Details         |       Account       |          Notifications          |
 | :-----------------------: | :-----------------: | :-----------------------------: |
