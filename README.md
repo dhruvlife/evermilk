@@ -1,35 +1,17 @@
 <!-- variables -->
 
-[about]: screenshots/about.jpg 'About'
-[account]: screenshots/account.jpg 'Account'
-[cart]: screenshots/cart.jpg 'Cart'
-[category]: screenshots/category.jpg 'Category'
-[explore]: screenshots/explore.jpg 'Explore'
-[favorites]: screenshots/favorites.jpg 'Favorites'
-[forgot-password]: screenshots/forgot-password.jpg 'Forgot Password'
-[help]: screenshots/help.jpg 'Help'
-[home]: screenshots/home.jpg 'Home'
-[my-details]: screenshots/my-details.jpg 'My Details'
-[notifications]: screenshots/notifications.jpg 'Notifications'
-[order-details]: screenshots/order-details.jpg 'Order Details'
-[orders]: screenshots/orders.jpg 'Orders'
-[payment-methods]: screenshots/payment-methods.jpg 'Payment Methods'
-[product-details]: screenshots/product-details.jpg 'Product Details'
-[promo-codes]: screenshots/promo-codes.jpg 'Promo Codes'
-[register-phone-dialog]: screenshots/register-phone-dialog.jpg 'Register Phone Dialog'
-[register-phone]: screenshots/register-phone.jpg 'Register Phone'
-[select-location]: screenshots/select-location.jpg 'Select Location'
-[set-location]: screenshots/set-location.jpg 'Set Location'
+[home]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/27.jpg 'Home page'
+[all-product-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/26.jpg 'All Product Page'
+[loading-effect]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/17.jpg 'Loading Effect'
 [signin]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/6.jpg 'Sign In'
 [otp]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/1.jpg 'Otp Screen'
-[signup]: screenshots/signup.jpg 'Sign Up'
 [personal-detail]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/11.jpg 'Personal Detail'
 [address-detail]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/19.jpg 'Address Detail'
 [additional-signup-info-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/24.jpg 'Additional Signup Info Page'
-[stores]: screenshots/stores.jpg 'Stores'
-[update-location]: screenshots/update-location.jpg 'Update Location'
-[verification]: screenshots/verification.jpg 'Verification'
-
+[category-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/29.jpg 'Category Page'
+[product-varient-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/2.jpg 'Product Varient Page'
+[product-detail]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/12.jpg 'Product Detail Page'
+[cart-page]: https://github.com/dhruvlife/evermilk/blob/main/assets/screenshots/31.jpg 'Cart Page'
 <!-- table of screenshots -->
 
 |      Sign In       |        Otp Screen         |
@@ -38,17 +20,17 @@
 
 <!-- signup, forgot, register phone -->
 
-|       Signup       |           Forgot Password           |          Additional Signup Info Page           |
+|       Personal Detail       |           Address Detail           |          Additional Signup Info Page           |
 | :----------------: | :---------------------------------: | :-------------------------------: |
-| ![Personal-detail][personal-detail] | ![Address-detail][address-detail] | ![Additional-signup-info-page][additional-signup-info-page] |
+| ![Personal Detail][personal-detail] | ![Address Detail][address-detail] | ![Additional Signup Info Page][additional-signup-info-page] |
 
-|              Register Phone Dialog              |         Verification          |           Select Location           |
+|              Home Page              |         All Product Page          |           Loading Effect           |
 | :---------------------------------------------: | :---------------------------: | :---------------------------------: |
-| ![Register Phone Dialog][register-phone-dialog] | ![Verification][verification] | ![Select Location][select-location] |
+| ![Home Page][home] | ![All Product Page][all-product-page] | ![Loading Effect][loading-effect] |
 
-|         Set Location          |     Home      |      Stores       |
+|         Product Varient Page          |     Product Detail Page      |      Cart Page       |
 | :---------------------------: | :-----------: | :---------------: |
-| ![Set Location][set-location] | ![Home][home] | ![Stores][stores] |
+| ![Product Varient Page][product-varient-page] | ![Product Detail Page][product-detail] | ![Cart Page][cart-page] |
 
 |          Store Details          |       Explore       |       Category        |
 | :-----------------------------: | :-----------------: | :-------------------: |
@@ -69,4 +51,4 @@
 |     Help      |
 | :-----------: |
 | ![Help][help] |
- hi
+ 
